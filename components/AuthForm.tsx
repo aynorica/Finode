@@ -11,12 +11,10 @@ import CustomInput from "./CustomInput";
 import { Loader2 } from "lucide-react";
 import Logo from "./logo";
 import authFormScheme from "@/lib/authFormScheme";
-import { useRouter } from "next/navigation";
 import { signIn, signUp } from "@/lib/actions/user.actions";
 import PlaidLink from "./PlaidLink";
 
 const AuthForm = ({ type }: { type: "sign-in" | "sign-up" }) => {
-	const router = useRouter();
 	const [user, setUser] = useState<any>(null);
 	const [loading, setLoading] = useState(false);
 	const formSchema = authFormScheme(type);
@@ -130,7 +128,7 @@ const AuthForm = ({ type }: { type: "sign-in" | "sign-up" }) => {
 											control={form.control}
 											label="SSN"
 											name="ssn"
-											placeholder="example: 12345"
+											placeholder="example: 1234"
 										/>
 									</div>
 								</>
